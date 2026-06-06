@@ -3,7 +3,7 @@ import { Suspense, lazy } from "react";
 import { URL } from "../constants";
 import LoadingImage from "../assets/image/loading.webp";
 
-const Setup = lazy(() => import("../pages/Setup"));
+const Setup = lazy(() => import("../pages/setup"));
 const Game = lazy(() => import("../pages/Game"));
 const GameResult = lazy(() => import("../pages/GameResult"));
 const Ranking = lazy(() => import("../pages/Ranking"));
