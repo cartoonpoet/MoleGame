@@ -13,6 +13,9 @@ const Ranking = () => {
       </header>
       <ul className={styles.rankingList}>
         {ranking.map((ranking, idx) => (
+          // key를 score+date 조합으로 만든 이유:
+          // 순위가 바뀌어도 같은 기록을 동일한 key로 식별해 불필요한 DOM 재생성을 막음
+          // idx만 쓰면 정렬 순서가 달라질 때 React가 잘못 재사용할 수 있음
           <Card
             key={`${ranking.score}-${ranking.date}`}
             num={idx + 1}

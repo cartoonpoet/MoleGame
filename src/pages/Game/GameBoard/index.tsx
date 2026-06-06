@@ -10,6 +10,9 @@ const GameBoard = () => {
       col: state.col,
     }))
   );
+  // CSS Custom Properties로 row/col을 전달하는 이유:
+  // CSS Grid의 repeat(var(--col), 1fr) 패턴으로 JS 없이 동적 격자를 구성할 수 있음
+  // 런타임에 row/col이 결정되므로 정적 CSS만으로는 처리할 수 없어 인라인 변수로 주입
   const styleVariable = {
     "--row": row,
     "--col": col,
